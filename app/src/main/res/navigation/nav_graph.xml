@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_signUpFragment_to_dashboardFragment"
             app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
@@ -55,6 +58,9 @@
         <argument
             android:name="dashboardDate"
             app:argType="string" />
+        <action
+            android:id="@+id/action_addEventFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/budgetFragment"
@@ -64,6 +70,9 @@
         <action
             android:id="@+id/action_budgetFragment_to_addBudgetFragment"
             app:destination="@id/addBudgetFragment" />
+        <action
+            android:id="@+id/action_budgetFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
     </fragment>
     <fragment
         android:id="@+id/addBudgetFragment"
@@ -73,12 +82,19 @@
         <action
             android:id="@+id/action_addBudgetFragment_to_viewBudgetFragment"
             app:destination="@id/viewBudgetFragment" />
+        <action
+            android:id="@+id/action_addBudgetFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewBudgetFragment"
         android:name="com.example.eventplanner.AddEventFragment.budget.ViewBudgetFragment"
         android:label="ViewBudgetFragment"
-        tools:layout="@layout/fragment_view_budget"/>
+        tools:layout="@layout/fragment_view_budget">
+        <action
+            android:id="@+id/action_viewBudgetFragment_to_addBudgetFragment"
+            app:destination="@id/addBudgetFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shoppingListView"
         android:name="com.example.eventplanner.AddEventFragment.shoppingList.ShoppingListView"
@@ -87,6 +103,9 @@
         <action
             android:id="@+id/action_shoppingListView_to_addItemFragment"
             app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_shoppingListView_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
@@ -96,6 +115,9 @@
         <action
             android:id="@+id/action_addItemFragment_to_shoppingListViewFragment"
             app:destination="@id/shoppingListViewFragment" />
+        <action
+            android:id="@+id/action_addItemFragment_to_shoppingListView"
+            app:destination="@id/shoppingListView" />
     </fragment>
     <fragment
         android:id="@+id/shoppingListViewFragment"
@@ -105,10 +127,17 @@
         <action
             android:id="@+id/action_shoppingListViewFragment_to_shoppingViewItemFragment"
             app:destination="@id/shoppingViewItemFragment" />
+        <action
+            android:id="@+id/action_shoppingListViewFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
     </fragment>
     <fragment
         android:id="@+id/shoppingViewItemFragment"
         android:name="com.example.eventplanner.AddEventFragment.shoppingList.ShoppingViewItemFragment"
         android:label="ShoppingViewItemFragment"
-        tools:layout="@layout/fragment_shopping_view_item"/>
+        tools:layout="@layout/fragment_shopping_view_item">
+        <action
+            android:id="@+id/action_shoppingViewItemFragment_to_shoppingListViewFragment"
+            app:destination="@id/shoppingListViewFragment" />
+    </fragment>
 </navigation>
