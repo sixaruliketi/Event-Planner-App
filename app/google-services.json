@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "12925214405",
+    "project_id": "eventplannerapp-e5eb1",
+    "storage_bucket": "eventplannerapp-e5eb1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12925214405:android:5556881e5c12931e621aac",
+        "android_client_info": {
+          "package_name": "com.example.eventplanner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc-Nc3XY_0Qx5eq5tfR2iEc5d5zPJSqh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
