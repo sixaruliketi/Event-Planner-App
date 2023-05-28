@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addBudgetGoBackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="19sp"
+        android:drawableLeft="@drawable/ic_arrow_back"
+        android:backgroundTint="@color/title_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/addBudgetNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/addBudgetGoBackBtn"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/addBudgetNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/addBudgetNameTxt"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintStart_toStartOf="@id/addBudgetNameTxt"
+        app:layout_constraintEnd_toEndOf="@id/addBudgetNameET"
+        app:layout_constraintBottom_toBottomOf="@id/addBudgetNameTxt"/>
+
+    <TextView
+        android:id="@+id/addBudgetPaidAmountTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Paid Amount"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/addBudgetNameTxt"
+        app:layout_constraintStart_toStartOf="@id/addBudgetNameTxt"/>
+
+    <EditText
+        android:id="@+id/addBudgetPaidAmountET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/addBudgetNameET"
+        app:layout_constraintBottom_toBottomOf="@id/addBudgetPaidAmountTxt"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/addBudgetPaidAmountTxt"
+        app:layout_constraintStart_toStartOf="@id/addBudgetPaidAmountTxt"
+        app:layout_constraintEnd_toEndOf="@id/addBudgetPaidAmountET"/>
+
+    <TextView
+        android:id="@+id/addBudgetBudgetTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/addBudgetPaidAmountTxt"
+        app:layout_constraintStart_toStartOf="@id/addBudgetPaidAmountTxt"/>
+
+    <EditText
+        android:id="@+id/addBudgetBudgetET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/addBudgetPaidAmountET"
+        app:layout_constraintBottom_toBottomOf="@id/addBudgetBudgetTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/addBudgetBudgetTxt"
+        app:layout_constraintStart_toStartOf="@id/addBudgetBudgetTxt"
+        app:layout_constraintEnd_toEndOf="@id/addBudgetBudgetET"/>
+
+    <TextView
+        android:id="@+id/addBudgetNotesTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/addBudgetBudgetTxt"
+        app:layout_constraintStart_toStartOf="@id/addBudgetBudgetTxt"/>
+
+    <EditText
+        android:id="@+id/addBudgetNotesET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/addBudgetBudgetET"
+        app:layout_constraintBottom_toBottomOf="@id/addBudgetNotesTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/addBudgetNotesTxt"
+        app:layout_constraintStart_toStartOf="@id/addBudgetNotesTxt"
+        app:layout_constraintEnd_toEndOf="@id/addBudgetNotesET"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addBudgetSaveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/title_text_color"
+        android:layout_marginBottom="15dp"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

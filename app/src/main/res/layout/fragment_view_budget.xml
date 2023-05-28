@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewBudgetGoBackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="19sp"
+        android:drawableLeft="@drawable/ic_arrow_back"
+        android:backgroundTint="@color/title_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/viewBudgetBudgetTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/viewBudgetGoBackBtn"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/viewBudgetBudgetET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textSize="19sp"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewBudgetBudgetTxt"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetBudgetTxt"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetBudgetET"
+        app:layout_constraintBottom_toBottomOf="@id/viewBudgetBudgetTxt"/>
+
+    <TextView
+        android:id="@+id/viewBudgetPaidAmountTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Paid Amount"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/viewBudgetBudgetTxt"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetBudgetTxt"/>
+
+    <TextView
+        android:id="@+id/viewBudgetPaidAmountET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textSize="19sp"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetBudgetET"
+        app:layout_constraintBottom_toBottomOf="@id/viewBudgetPaidAmountTxt"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/viewBudgetPaidAmountTxt"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetPaidAmountTxt"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetPaidAmountET"/>
+
+    <TextView
+        android:id="@+id/viewBudgetDueToPaidTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Due to paid"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/viewBudgetPaidAmountTxt"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetPaidAmountTxt"/>
+
+    <TextView
+        android:id="@+id/viewBudgetDueToPaidET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textSize="19sp"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetPaidAmountET"
+        app:layout_constraintBottom_toBottomOf="@id/viewBudgetDueToPaidTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/viewBudgetDueToPaidTxt"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetDueToPaidTxt"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetDueToPaidET"/>
+
+    <TextView
+        android:id="@+id/viewBudgetNotesTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/viewBudgetDueToPaidTxt"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetDueToPaidTxt"/>
+
+    <TextView
+        android:id="@+id/viewBudgetNotesET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textSize="19sp"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetDueToPaidET"
+        app:layout_constraintBottom_toBottomOf="@id/viewBudgetNotesTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/viewBudgetNotesTxt"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetNotesTxt"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetNotesET"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewBudgetDeleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/title_text_color"
+        android:layout_marginBottom="15dp"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/viewBudgetEditBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/title_text_color"
+        android:layout_marginBottom="15dp"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toTopOf="@id/viewBudgetDeleteBtn"
+        app:layout_constraintStart_toStartOf="@id/viewBudgetDeleteBtn"
+        app:layout_constraintEnd_toEndOf="@id/viewBudgetDeleteBtn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

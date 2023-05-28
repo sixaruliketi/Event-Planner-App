@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.eventplanner.signIn_signUp.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.eventplanner.signIn_signUp.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.eventplanner.dashboard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventFragment"
+        android:name="com.example.eventplanner.AddEventFragment.AddEventFragment"
+        android:label="AddEventFragment"
+        tools:layout="@layout/fragment_add_event">
+        <action
+            android:id="@+id/action_addEventFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+        <action
+            android:id="@+id/action_addEventFragment_to_shoppingListView"
+            app:destination="@id/shoppingListView" />
+        <argument
+            android:name="dashboardEventName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.example.eventplanner.AddEventFragment.budget.BudgetFragment"
+        android:label="BudgetFragment"
+        tools:layout="@layout/fragment_budget">
+        <action
+            android:id="@+id/action_budgetFragment_to_addBudgetFragment"
+            app:destination="@id/addBudgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBudgetFragment"
+        android:name="com.example.eventplanner.AddEventFragment.budget.AddBudgetFragment"
+        android:label="AddBudgetFragment"
+        tools:layout="@layout/fragment_add_budget">
+        <action
+            android:id="@+id/action_addBudgetFragment_to_viewBudgetFragment"
+            app:destination="@id/viewBudgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBudgetFragment"
+        android:name="com.example.eventplanner.AddEventFragment.budget.ViewBudgetFragment"
+        android:label="ViewBudgetFragment"
+        tools:layout="@layout/fragment_view_budget"/>
+    <fragment
+        android:id="@+id/shoppingListView"
+        android:name="com.example.eventplanner.AddEventFragment.shoppingList.ShoppingListView"
+        android:label="ShoppingListView"
+        tools:layout="@layout/fragment_shopping_list">
+        <action
+            android:id="@+id/action_shoppingListView_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.eventplanner.AddEventFragment.shoppingList.AddItemFragment"
+        android:label="AddItemFragment"
+        tools:layout="@layout/fragment_add_item">
+        <action
+            android:id="@+id/action_addItemFragment_to_shoppingListViewFragment"
+            app:destination="@id/shoppingListViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingListViewFragment"
+        android:name="com.example.eventplanner.AddEventFragment.shoppingList.ShoppingListViewFragment"
+        android:label="ShoppingListViewFragment"
+        tools:layout="@layout/fragment_shopping_list_view">
+        <action
+            android:id="@+id/action_shoppingListViewFragment_to_shoppingViewItemFragment"
+            app:destination="@id/shoppingViewItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingViewItemFragment"
+        android:name="com.example.eventplanner.AddEventFragment.shoppingList.ShoppingViewItemFragment"
+        android:label="ShoppingViewItemFragment"
+        tools:layout="@layout/fragment_shopping_view_item"/>
+</navigation>

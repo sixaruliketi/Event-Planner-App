@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/shoppingAddItemGoBackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ShoppingList"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="19sp"
+        android:drawableLeft="@drawable/ic_arrow_back"
+        android:backgroundTint="@color/title_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/shoppingAddItemNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemGoBackBtn"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/shoppingAddItemNameET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/shoppingAddItemNameTxt"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemNameTxt"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemNameET"
+        app:layout_constraintBottom_toBottomOf="@id/shoppingAddItemNameTxt"/>
+
+    <TextView
+        android:id="@+id/shoppingAddItemQuantityTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Qty."
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemNameTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemNameTxt"/>
+
+    <EditText
+        android:id="@+id/shoppingAddItemQuantityET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:inputType="number"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemNameET"
+        app:layout_constraintBottom_toBottomOf="@id/shoppingAddItemQuantityTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemQuantityTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemQuantityTxt"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemQuantityET"/>
+
+    <TextView
+        android:id="@+id/shoppingAddItemQuantityModeTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Qty Mode"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemQuantityTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemQuantityTxt"/>
+
+    <EditText
+        android:id="@+id/shoppingAddItemQuantityModeET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemQuantityET"
+        app:layout_constraintBottom_toBottomOf="@id/shoppingAddItemQuantityModeTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemQuantityModeTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemQuantityModeTxt"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemQuantityModeET"/>
+
+    <TextView
+        android:id="@+id/shoppingAddItemPriceTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemQuantityModeTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemQuantityModeTxt"/>
+
+    <EditText
+        android:id="@+id/shoppingAddItemPriceET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemQuantityModeET"
+        app:layout_constraintBottom_toBottomOf="@id/shoppingAddItemPriceTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemPriceTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemPriceTxt"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemPriceET"/>
+
+    <TextView
+        android:id="@+id/shoppingAddItemNotesTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textSize="19sp"
+        android:textColor="@color/title_text_color"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemPriceTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemPriceTxt"/>
+
+    <EditText
+        android:id="@+id/shoppingAddItemNotesET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="xxxxx"
+        android:textColorHint="@color/light_blue"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemPriceET"
+        app:layout_constraintBottom_toBottomOf="@id/shoppingAddItemNotesTxt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color"
+        app:layout_constraintTop_toBottomOf="@id/shoppingAddItemNotesTxt"
+        app:layout_constraintStart_toStartOf="@id/shoppingAddItemNotesTxt"
+        app:layout_constraintEnd_toEndOf="@id/shoppingAddItemNotesET"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/shoppingAddItemSaveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/title_text_color"
+        android:layout_marginBottom="15dp"
+        android:paddingHorizontal="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <EditText
+        android:id="@+id/dashboardSearchET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Search"
+        android:textColor="@color/title_text_color"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/square_corner_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dashboardAddEventBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Event"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/title_text_color"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="5dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/dashboardSearchET"
+        app:layout_constraintStart_toStartOf="@id/dashboardSearchET"
+        app:layout_constraintEnd_toEndOf="@id/dashboardSearchET"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dashboardEventRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/dashboard_event_rv_item"
+        app:layout_constraintStart_toStartOf="@id/dashboardSearchET"
+        app:layout_constraintEnd_toEndOf="@id/dashboardSearchET"
+        app:layout_constraintTop_toBottomOf="@id/dashboardAddEventBtn"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
