@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.eventplanner.dashboard.adapter.DashboardRecyclerViewAdapter
 import com.example.eventplanner.dashboard.models.Event
 import com.example.eventplanner.databinding.FragmentDashboardBinding
@@ -40,7 +39,7 @@ class DashboardFragment : Fragment() {
 
             dashboardRecyclerViewAdapter.onItemClick = {
                 val action = DashboardFragmentDirections.actionDashboardFragmentToAddEventFragment(
-                    it.eventName.toString()
+                    it.eventName.toString(), it.venue.toString(), it.date.toString()
                 )
                 Navigation.findNavController(binding.root).navigate(action)
             }
@@ -50,10 +49,10 @@ class DashboardFragment : Fragment() {
     private fun getData(): MutableList<Event> {
         val eventsList = ArrayList<Event>()
         eventsList.add(
-            Event("event 1", "event 1 description: really cool event you wanna go to")
+            Event("event 1", "event 1 description: really cool event you wanna go to", "venue 1", "02/11/1999")
         )
         eventsList.add(
-            Event("event 2", "event 2 description: really cool event you wanna go to")
+            Event("event 2", "event 2 description: really cool event you wanna go to", "venue 2","15/16/1645")
         )
         eventsList.add(
             Event("event 3", "event 3 description: really cool event you wanna go to")

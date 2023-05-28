@@ -3,9 +3,15 @@ package com.example.eventplanner.dashboard.models
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Event(val eventName : String? = null,
-                 val eventDescription: String? = null) : Parcelable {
+data class Event(
+    val eventName: String? = null,
+    val eventDescription: String? = null,
+    val venue: String ? = null,
+    val date: String? = null
+) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString()
     ) {
@@ -14,6 +20,7 @@ data class Event(val eventName : String? = null,
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(eventName)
         parcel.writeString(eventDescription)
+        parcel.writeString(venue)
     }
 
     override fun describeContents(): Int {

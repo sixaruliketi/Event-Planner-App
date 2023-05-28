@@ -16,7 +16,7 @@ class AddEventFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAddEventBinding.inflate(inflater,container,false)
         return binding.root
     }
@@ -28,7 +28,10 @@ class AddEventFragment : Fragment() {
 
     private fun init() {
         binding.apply {
-            addEventEventNameET.text = AddEventFragmentArgs.fromBundle(requireArguments()).dashboardEventName
+            val arg = AddEventFragmentArgs.fromBundle(requireArguments())
+            addEventEventNameET.hint = arg.dashboardEventName
+            addEventVenueNameET.hint = arg.dashboardVenue
+            addEventDateET.hint = arg.dashboardDate
         }
     }
 

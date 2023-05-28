@@ -49,6 +49,12 @@
         <argument
             android:name="dashboardEventName"
             app:argType="string" />
+        <argument
+            android:name="dashboardVenue"
+            app:argType="string" />
+        <argument
+            android:name="dashboardDate"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/budgetFragment"
